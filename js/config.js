@@ -42,12 +42,12 @@ var CONFIG = {
 	'house':[
 		{'level':0, 'price':1000, 'charge':500},
 		{'level':1, 'price':1000, 'charge':1000},
-		{'level':2, 'price':1100, 'charge':2000},
-		{'level':3, 'price':1200, 'charge':5000}
+		{'level':2, 'price':2000, 'charge':3000},
+		{'level':3, 'price':3000, 'charge':6000}
 	],
 	'player':[
-		{'id':1, 'balance':50000, 'blockNumber': 3, index: 0},
-		{'id':2, 'balance':50000, 'blockNumber': 3, index: 7}
+		{'id':1, 'balance':24000, 'blockNumber': 3, index: 0},
+		{'id':2, 'balance':24000, 'blockNumber': 3, index: 7}
 	],
 	'timeout_seconds':15
 }

@@ -192,8 +192,8 @@ function Game() {
 					// 如果没钱缴过路费就破产了！
 					extraView.gameOver(user);
 					
-					extraView.Notice(user, '不好意思，你输了这场游戏！');
-					extraView.Notice(grid.owner, '恭喜恭喜，你赢了这场游戏！');
+					extraView.Notice(user, '不好意思，你输了这场比特币挖矿游戏！');
+					extraView.Notice(grid.owner, '恭喜恭喜，你赢了这场比特币挖矿游戏！');
 				}
 			}
 
@@ -210,17 +210,22 @@ function Game() {
 		var person = personMap[user],
 			index = person.index,
 			grid = gridList[index];
+			
+		if (!couldBuy(user, index)) {
+			console.log("game.confirm could not buy")
+			return;
+		}
 		
 		person.spend(grid.price);
 		
 		if(grid.owner == 0) {
 			grid.owner = user;
-			extraView.Notice(grid.owner, '恭喜你获得了这块地，继续加油！');
+			extraView.Notice(grid.owner, '恭喜你获得了这个矿场，继续加油！');
 		}
 		
 		else if(grid.owner == user) {	
 			grid.upgrade();
-			extraView.Notice(grid.owner, '你的土地升级到了 ' + grid.level + ' 级，继续加油！');
+			extraView.Notice(grid.owner, '你的矿机升级到了 ' + grid.level + ' 级，继续加油！');
 		}
 
 		extraView.unlock(user);

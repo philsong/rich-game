@@ -14,7 +14,7 @@ var SCALE=0.8;
 var IMAGE_LIST=[ 
 	{
 		id:"bg",
-		url:"images/bg.gif"
+		url:"images/bg.jpg"
 	},
 	{
 		id : "map",
